@@ -1,0 +1,15 @@
+#! /nix/store/00zrahbb32nzawrmv9sjxn36h7qk9vrs-bash-5.2p37/bin/bash -e
+PATH=${PATH:+':'$PATH':'}
+PATH=${PATH/':''/nix/store/lxam4qm26kpc8dnnixmmvj9hswsvki3g-python3.13-diskusage-0.1/bin'':'/':'}
+PATH='/nix/store/lxam4qm26kpc8dnnixmmvj9hswsvki3g-python3.13-diskusage-0.1/bin'$PATH
+PATH=${PATH#':'}
+PATH=${PATH%':'}
+export PATH
+PATH=${PATH:+':'$PATH':'}
+PATH=${PATH/':''/nix/store/sd81bvmch7njdpwx3lkjslixcbj5mivz-python3-3.13.4/bin'':'/':'}
+PATH='/nix/store/sd81bvmch7njdpwx3lkjslixcbj5mivz-python3-3.13.4/bin'$PATH
+PATH=${PATH#':'}
+PATH=${PATH%':'}
+export PATH
+export PYTHONNOUSERSITE='true'
+exec -a "$0" "/nix/store/lxam4qm26kpc8dnnixmmvj9hswsvki3g-python3.13-diskusage-0.1/bin/.diskusage-wrapped"  "$@" 
